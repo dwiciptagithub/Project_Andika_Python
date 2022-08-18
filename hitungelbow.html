@@ -1,0 +1,76 @@
+{% include 'header.html' %}
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-sm-6">
+            <h1 class="h3 m-0 text-dark">Hitung Elbow</h1>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <form action='/hitungelbow' method='POST'>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <p>{{ message }}</p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group">
+            <label for="input dari">Input Range (Dari)</label>
+            <input type="number" id="dari" name="dari" class="form-control" style="width:20%" min="1" max="100">
+            <br>
+            <label for="imput sampai">Input Range (Sampai)</label>
+            <input type="number" id="sampai" name="sampai" class="form-control" style="width:20%" min="1" max="100">
+        </div>
+
+        <!-- button hitung cluster -->
+        <div style="width:700px;" id="container">
+            <div>
+                <button class="btn btn-primary" type="submit" class="btn" onClick="window.location.href='/hitungelbow'">
+            Proses Elbow
+          </button>
+            </div>
+        </div>
+        <!-- <body>
+            <canvas id="lineChart" width="900" height="400"></canvas>
+            <script>
+                var ctx = document.getElementById("lineChart");
+                var lineChart = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        k: k | safe,
+                        nilai_sse: [{
+                            label: "Metode Elbow",
+                            data: nilai_sse | safe,
+                            fill: false,
+                            borderColor: "rgb(75, 192, 192)",
+                            lineTension: 0.1
+                        }]
+                    },
+                    options: {
+                        responsive: false
+                    }
+                });
+            </script>
+        </body> -->
+        <div>
+
+        </div>
+
+        <!-- <body>
+            <span> {{ graph }}</span> {% if graph %} <img src="{{ graph.url }}"> {% endif %}
+        </body> -->
+        <!-- {{ graph }} -->
+        <!-- End of Main Content -->
+
+
+</div>
+</div>
+{% include 'footer.html' %}

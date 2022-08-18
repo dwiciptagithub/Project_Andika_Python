@@ -1,0 +1,127 @@
+{% include 'header.html' %}
+<div id="content">
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+
+
+        <!-- DataTales Example -->
+        <ul class="list-inline">
+            <li class="fcolor list-inline-item">
+                <h4>Lihat Dataset<i class="fas fa-ellipsis-v ml-4"></i></h4>
+            </li>
+            <i class="fas fa-home ml-3 "></i>
+            <i class="fas fa-angle-right ml-2"></i>
+            <li class="list-inline-item ml-2">Kelola Dataset</li>
+            <i class="fas fa-angle-right ml-2"></i>
+            <li class="list-inline-item ml-2">Lihat Dataset</li>
+        </ul>
+
+        <div class="card shadow mb-4 mt-4">
+            <!-- <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Data Petugas</h6>
+        </div> -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <div class="row">
+                            <div class=" col-md-12">
+
+                                <thead style="text-align: center">
+                                    <tr>
+                                        <th style="width: 10px">No</th>
+                                        <th>Nama PTS</th>
+                                        <th>Jumlah Mahasiswa</th>
+                                        <th>Jumlah Dosen </th>
+                                        <th>Jumlah Program Studi</th>
+                                        <th>Fasilitas Olahraga</th>
+                                        <th>Wisma/Asrama/Hotel</th>
+                                        <th>Teknologi Informasi</th>
+                                        <th>Public Area</th>
+                                        <th>PERS Mahasiswa</th>
+                                        <th>Asuransi</th>
+                                        <th>Gedung Pertemuan</th>
+                                        <th>Laboratorium</th>
+                                        <th>Poliklinik</th>
+                                        <th>Bus Kampus</th>
+                                        <th>Kalender Pendidikan</th>
+                                        <th>Pusat Pelatihan Bahasa</th>
+                                        <th>Perpustakaan</th>
+                                        <th>Sarana Ibadah</th>
+                                        <th>Free Hotspot</th>
+                                        <th>Jumlah Fasilitas</th>
+                                        <th>Bus Umum</th>
+                                        <th>Restaurant</th>
+                                        <th>Tempat Ibadah</th>
+                                        <th>Kos/Asrama</th>
+                                        <th>Terminal Bus</th>
+                                        <th>Cafe</th>
+                                        <th>Tempat Olahraga</th>
+                                        <th>Bandara</th>
+                                        <th>Mall</th>
+                                        <th>Rumah Sakit</th>
+                                        <th>Stasiun Kereta</th>
+                                        <th>Supermarket</th>
+                                        <th>Apotek</th>
+                                        <th>Jumlah Tempat Umum Terdekat</th>
+                                        <th>Akreditasi</th>
+                                        <th>Ranking Nasional</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+                                    {% for rs in datacsv %}
+                                    <tr>
+                                        <td>{{ loop.index }}</td>
+                                        <td>{{ rs['Nama Perguruan Tinggi']}}</td>
+                                        <td>{{ rs['Jumlah Mahasiswa']}}</td>
+                                        <td>{{ rs['Jumlah Program Studi']}}</td>
+                                        <td>{{ rs['Fasilitas Olahraga']}}</td>
+                                        <td>{{ rs['Wisma/Asrama/Hotel']}}</td>
+                                        <td>{{ rs['Teknologi Informasi']}}</td>
+                                        <td>{{ rs['Public Area']}}</td>
+                                        <td>{{ rs['PERS Mahasiswa']}}</td>
+                                        <td>{{ rs['Asuransi']}}</td>
+                                        <td>{{ rs['Gedung Pertemuan']}}</td>
+                                        <td>{{ rs['Laboratorium']}}</td>
+                                        <td>{{ rs['Poliklinik']}}</td>
+                                        <td>{{ rs['Bus Kampus']}}</td>
+                                        <td>{{ rs['Kalender Pendidikan']}}</td>
+                                        <td>{{ rs['Pusat Pelatihan Bahasa']}}</td>
+                                        <td>{{ rs['Perpustakaan']}}</td>
+                                        <td>{{ rs['Sarana Ibadah']}}</td>
+                                        <td>{{ rs['Free Hotspot']}}</td>
+                                        <td>{{ rs['Jumlah Fasilitas']}}</td>
+                                        <td>{{ rs['Bus Umum']}}</td>
+                                        <td>{{ rs['Restaurant']}}</td>
+                                        <td>{{ rs['Tempat Ibadah']}}</td>
+                                        <td>{{ rs['Kos/Asrama']}}</td>
+                                        <td>{{ rs['Terminal Bus']}}</td>
+                                        <td>{{ rs['Cafe']}}</td>
+                                        <td>{{ rs['Tempat Olahraga']}}</td>
+                                        <td>{{ rs['Kos/Asrama']}}</td>
+                                        <td>{{ rs['Bandara']}}</td>
+                                        <td>{{ rs['Mall']}}</td>
+                                        <td>{{ rs['Rumah Sakit']}}</td>
+                                        <td>{{ rs['Stasiun Kereta']}}</td>
+                                        <td>{{ rs['Supermarket']}}</td>
+                                        <td>{{ rs['Apotek']}}</td>
+                                        <td>{{ rs['Jumlah Tempat Umum Terdekat']}}</td>
+                                        <td>{{ rs['Akreditasi']}}</td>
+                                        <td>{{ rs['Ranking Nasional']}}</td>
+
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                    </table>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    {% include 'footer.html' %}

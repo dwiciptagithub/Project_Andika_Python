@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-sm-6">
+            <h1 class="h3 m-0 text-dark">Lihat Cluster</h1>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <form action='/lihatcluster' method='POST'>
+        <div class="form-group">
+            <label for="jumlah_klaster">Jumlah Cluster</label>
+            <input type="number" id="jumlah_klaster" name="jumlah_klaster" class="form-control" style="width:20%" min="1" max="4">
+        </div>
+
+        <!-- button hitung cluster -->
+        <div style="width:700px;" id="container">
+            <div>
+                <button type="submit" class="btn btn-primary" onClick="window.location.href='/lihatcluster'">
+            Hitung cluster!
+          </button>
+            </div>
+        </div>
+
+        <!-- End of Main Content -->
+</div>
+</div>
+
+
+{% include 'footer.html' %}

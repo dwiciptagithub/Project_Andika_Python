@@ -1,0 +1,70 @@
+{% include 'header.html' %}
+<style>
+    #uploadfile {
+        margin-top: 50px;
+        margin-left: 50px;
+        width: 50%;
+        border: 3px solid gray;
+        padding: 10px;
+    }
+    
+    .row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .row>[class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .button {
+        position: absolute;
+        top: 50%;
+    }
+</style>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <ul class="list-inline">
+        <li class="fcolor list-inline-item">
+            <h4>Import Dataset<i class="fas fa-ellipsis-v ml-4"></i></h4>
+        </li>
+        <i class="fas fa-home ml-3 "></i>
+        <i class="fas fa-angle-right ml-2"></i>
+        <li class="list-inline-item ml-2">Kelola Dataset</li>
+        <i class="fas fa-angle-right ml-2"></i>
+        <li class="list-inline-item ml-2">Import Dataset</li>
+    </ul>
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-sm-6" style="padding-top: 25px;">
+            <h1 class="h6 m-0 text-dark">Import Data dengan format .csv</h1>
+
+            <div>
+                <h1 class="h6 m-0 text-dark">Upload File</h1>
+            </div>
+        </div>
+        <div class="page-content" id="uploadfile" style="margin-top: 5px;">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <form class="md-form" enctype="multipart/form-data" action="/uploadsuccess" method="post" enctype="multipart/form-data">
+                        <input name="upload" id="fileSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                        <input type="submit" value="Import Data" class="btn btn-success">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Main Content -->
+
+</div>
+</div>
+{% include 'footer.html' %}
